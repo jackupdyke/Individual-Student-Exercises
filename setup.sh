@@ -30,7 +30,7 @@ git config --global difftool.code.cmd "code -w -d \$LOCAL \$REMOTE"
 echo
 echo "Configuring Upstream..."
 
-git remote add upstream "https://git.techelevator.com/campuses/cbus/jan-2022/c-sharp/student-code/student-material"
+git remote add upstream "https://git.techelevator.com/campuses/cbus/jan-2022/c-sharp/instructor-code.git"
 git config branch.master.mergeOptions "--no-edit"
 
 echo "Done."
