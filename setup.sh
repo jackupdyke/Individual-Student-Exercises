@@ -31,6 +31,6 @@ echo
 echo "Configuring Upstream..."
 
 git remote add upstream "https://git.techelevator.com/campuses/cbus/jan-2022/c-sharp/instructor-code.git"
-git config branch.master.mergeOptions "--no-edit"
+git config branch.main.mergeOptions "--no-edit"
 
 echo "Done."
