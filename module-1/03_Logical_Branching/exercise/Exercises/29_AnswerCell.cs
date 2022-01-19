@@ -11,6 +11,19 @@
          */
         public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
         {
+            if (isAsleep == true)
+            {
+                return false;
+            }
+            else if (isMorning == true && isMom == false)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
             return false;
         }
     }

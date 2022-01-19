@@ -9,7 +9,7 @@
         */
         public double ReturnNotHalf()
         {
-            return 0.5;
+            return 1.5;
         }
     }
 }

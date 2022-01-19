@@ -11,7 +11,27 @@
          */
         public int Max1020(int a, int b)
         {
-            return 0;
+            if ((a < 10 || a > 20) && (b < 10 || b > 20))
+            {
+                return 0;
+            }
+            else if ((10 <= a && a <= 20) && (b < 10 || b > 20))
+            {
+                return a;
+            }
+            else if ((a < 10 || a > 20) && (10 <= b && b <=20))
+            {
+                return b;
+            }
+            else if ((10 <= a && a <= 20) && (10 <= b && b <= 20) && a >=b)
+            {
+                return a;
+            }
+            else 
+            {
+                return b;
+            }
+            
         }
     }
 }

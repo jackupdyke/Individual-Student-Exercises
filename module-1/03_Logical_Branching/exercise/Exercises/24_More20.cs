@@ -11,7 +11,15 @@
          */
         public bool More20(int n)
         {
-            return false;
+            if (n % 20 >= 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }
