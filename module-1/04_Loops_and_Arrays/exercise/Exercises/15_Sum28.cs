@@ -10,6 +10,19 @@
          */
         public bool Sum28(int[] nums)
         {
+
+            int sumToEight = 0;
+            for(int i = 0; i < nums.Length; i++)
+            {
+                if(nums[i] == 2)
+                {
+                    sumToEight += 2;
+                }
+            }
+            if(sumToEight == 8)
+            {
+                return true;
+            }
             return false;
         }
     }

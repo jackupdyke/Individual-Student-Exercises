@@ -11,6 +11,10 @@
          */
         public bool SameFirstLast(int[] nums)
         {
+            if(nums.Length >= 1 && (nums[0] == nums[nums.Length -1]))
+                {
+                return true;
+            }
             return false;
         }
     }

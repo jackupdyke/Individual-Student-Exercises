@@ -11,7 +11,13 @@
          */
         public int[] MiddleWay(int[] a, int[] b)
         {
-            return new int[] { };
+            int[] MiddleElements = new int[2];
+            MiddleElements[0] = a[a.Length / 2];
+            MiddleElements[1] = b[b.Length / 2];
+
+            return MiddleElements;
+
+           
         }
     }
 }

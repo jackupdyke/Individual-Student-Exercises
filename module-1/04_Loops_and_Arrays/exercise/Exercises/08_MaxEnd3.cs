@@ -11,7 +11,32 @@
          */
         public int[] MaxEnd3(int[] nums)
         {
-            return new int[] { };
+            if(nums[0] > nums[2])
+            {
+                int[] result = new int[3];
+                result[0] = nums[0];
+                result[1] = nums[0];
+                result[2] = nums[0];
+
+                return result;
+
+                }
+            else if(nums[2] > nums[0])
+            {
+                int[] result2 = new int[3];
+                result2[0] = nums[2];
+                result2[1] = nums[2];
+                result2[2] = nums[2];
+
+                return result2;
+            }
+            else
+            {
+                return nums;
+            }
+
+            }
+            
         }
     }
-}
+
