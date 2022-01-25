@@ -11,7 +11,16 @@
         */
         public string WithoutEnd2(string str)
         {
-            return null;
+            string blank = "";
+            if(str.Length < 3)
+            {
+                return blank;
+            }
+            else
+            {
+                return str.Substring(1, str.Length - 2);
+            }
+          
         }
     }
 }

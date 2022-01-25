@@ -10,6 +10,7 @@
         */
         public int CountXX(string str)
         {
+
             return 0;
         }
     }

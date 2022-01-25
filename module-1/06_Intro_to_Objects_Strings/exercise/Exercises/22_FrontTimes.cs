@@ -11,6 +11,7 @@
         */
         public string FrontTimes(string str, int n)
         {
+
             return null;
         }
 
