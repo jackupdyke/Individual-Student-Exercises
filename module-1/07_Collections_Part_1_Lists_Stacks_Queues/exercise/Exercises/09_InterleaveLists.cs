@@ -21,17 +21,17 @@ namespace Exercises
             {
                 if(i % 2 == 0 && i < listOne.Count)
                 {
-                    result.Insert(i,listOne[i]);
+                    result.Insert(i, listOne[i]);
                 }
-                else
+                else if(i % 2 != 0 && i < listTwo.Count)
                 {
                     result.Insert(i, listTwo[i - 1]);
                 }
-            
-                
-                
+
             }
+
             return result;
+            
         }
     }
 }
