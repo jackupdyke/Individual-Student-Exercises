@@ -11,7 +11,23 @@
         public string StringTimes(string str, int n)
         {
 
-            return null;
+            
+            if (n > 0)
+            {
+
+                string result = str;
+                for (int i = 1; i <= n - 1; i++)
+                {
+                    result = result + str;
+                }
+
+                return result;
+            }
+            else
+            {
+                return "";
+            }
+            
         }
     }
 }

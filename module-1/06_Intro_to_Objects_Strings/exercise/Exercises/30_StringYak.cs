@@ -11,7 +11,26 @@
         */
         public string StringYak(string str)
         {
-            return null;
+
+            string result = "";
+
+            for(int i = 0; i < str.Length; i++)
+            {
+                if(i + 2 < str.Length && str.Substring(i, 1) == "y" && str.Substring(i + 1, 1) == "a" && str.Substring(i + 2, 1) == "k")
+                {
+                    i += 2;
+                }
+                else
+                {
+                    result += str.Substring(i, 1);
+                }
+            }
+
+            return result;
+
+
         }
+            
+        
     }
 }

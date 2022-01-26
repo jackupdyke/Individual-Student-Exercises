@@ -10,7 +10,14 @@
         */
         public string StringSplosion(string str)
         {
-            return null;
+            string result = "";
+
+            for(int i = 1; i < str.Length + 1; i++)
+            {
+                result += str.Substring(0, i);
+            }
+
+            return result;
         }
     }
 }

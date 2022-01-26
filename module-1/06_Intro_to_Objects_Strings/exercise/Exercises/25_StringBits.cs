@@ -10,7 +10,19 @@
         */
         public string StringBits(string str)
         {
-            return null;
+            string result = "";
+
+            for(int i = 0; i < str.Length; i+=2)
+            {
+
+                result = result + str.Substring(i, 1);
+                
+                
+            }
+
+            return result;
         }
+
+        
     }
 }

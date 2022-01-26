@@ -10,8 +10,17 @@
         */
         public int CountXX(string str)
         {
-
-            return 0;
+            int count = 0;
+            int length = str.Length; 
+            for(int i = 0; i < length - 1; i++)
+            {
+                if(str.Substring(i,1) == "x" && str.Substring(i + 1, 1) == "x")
+                {
+                    count++;
+                }
+            }
+            
+            return count;
         }
     }
 }
