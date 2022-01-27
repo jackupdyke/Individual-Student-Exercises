@@ -26,7 +26,7 @@ namespace Exercises
             foreach (string item in words)
             {
                 int count = 0;
-                int length = words.Length;
+                int length = item.Length;
                 if (length < 3)
                 {
                     result[item] = 0;
@@ -41,7 +41,6 @@ namespace Exercises
                     }
 
                 }
-                
                 result[item] = count;
             }
 

@@ -18,26 +18,55 @@ namespace Exercises
                                                             Dictionary<string, int> remoteWarehouse)
         {
             Dictionary<string, int> result = new Dictionary<string, int>();
-            foreach (KeyValuePair<string, int> item in mainWarehouse)
+            
+            if(mainWarehouse.Count == 0)
             {
-                foreach (KeyValuePair<string, int> item2 in remoteWarehouse)
+                foreach(KeyValuePair<string, int> item2 in remoteWarehouse)
                 {
-                    if (item2.Key == item.Key)
-                    {
-                        result[item.Key] = item.Value + item2.Value;
-                    }
-                    if (item2.Key != item.Key)
+                    result.Add(item2.Key, item2.Value);
+                }
+            }
+            else if(remoteWarehouse.Count == 0)
+            {
+                foreach(KeyValuePair<string, int> item in mainWarehouse)
+                {
+                    result.Add(item.Key, item.Value);
+                }
+            }
+            else
+            {
+                foreach (KeyValuePair<string, int> item in mainWarehouse)
+                {
+                    foreach (KeyValuePair<string, int> item2 in remoteWarehouse)
                     {
 
-                        result.Add(item2.Key, item2.Value);
-                    }
+                        if ((!result.ContainsKey(item.Key) || !result.ContainsKey(item2.Key)) && item.Key != item2.Key)
+                        {
+                            if(!result.ContainsKey(item.Key))
+                            {
+                                result.Add(item.Key, item.Value);
+                            }
+                            if(!result.ContainsKey(item2.Key))
+                            {
+                                result.Add(item2.Key, item2.Value);
+                            }
 
+                        }
+                        else if (item.Key == item2.Key)
+                        {
+                            result[item.Key] = item.Value + item2.Value;
+                        }
+
+
+
+                    }
 
 
                 }
-
-              
             }
+
+
+            
             return result;
         }
     }
