@@ -14,7 +14,21 @@ namespace Exercises
          */
         public Dictionary<string, string> BeginningAndEnding(string[] words)
         {
-            return null;
+            Dictionary<string, string> result = new Dictionary<string, string>();
+
+            foreach(string item in words)   
+            {
+
+                if (result.ContainsKey(item.Substring(0, 1)))
+                {
+                    result.Remove(item.Substring(0, 1));
+                }
+                result.Add(item.Substring(0, 1), item.Substring(item.Length - 1, 1));
+                
+         
+                
+            }
+            return result;
         }
     }
 }
