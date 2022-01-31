@@ -18,8 +18,8 @@
         /// <param name="bidAmount">How much bid is for</param>
         public Bid(string bidder, int bidAmount)
         {
-            this.Bidder = bidder;
-            this.BidAmount = bidAmount;
+            Bidder = bidder;
+            BidAmount = bidAmount;
         }
     }
 }
