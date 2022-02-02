@@ -52,7 +52,7 @@ namespace Exercises
                         int sideLength = int.Parse(Console.ReadLine());
 
                         //uncomment after step 4:
-                        //newWall = new SquareWall(name, color, sideLength);
+                        newWall = new SquareWall(name, color, sideLength);
                     }
                     else if (shapeChoice == "3")
                     {
