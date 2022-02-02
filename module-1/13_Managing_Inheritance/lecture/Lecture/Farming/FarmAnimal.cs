@@ -3,7 +3,7 @@ namespace Lecture.Farming
     /// <summary>
     /// A base farm animal class.
     /// </summary>
-    public class FarmAnimal : ISingable
+    public abstract class FarmAnimal : ISingable
     {
         /// <summary>
         /// The farm animal's name.
@@ -25,6 +25,8 @@ namespace Lecture.Farming
                 sound = value;
             }
         }
+
+        public abstract string Eat();
 
         /// <summary>
         /// Creates a new farm animal.

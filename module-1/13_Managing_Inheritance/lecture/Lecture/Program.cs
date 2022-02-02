@@ -13,7 +13,7 @@ namespace Lecture
 
             ISingable[] singables = new ISingable[]
             {
-                new Cow(), new Chicken(), new Pig(), new Tractor()
+                new Cow(), new Chicken(), new Pig(), new Tractor(), new Cat() 
             };
 
             foreach(ISingable singable in singables)
@@ -25,6 +25,11 @@ namespace Lecture
                 Console.WriteLine("Here a " + singable.Sound + " there a " + singable.Sound + " everywhere a " + singable.Sound + " " + singable.Sound);
                 Console.WriteLine();
             }
+
+            Console.WriteLine("Old MacDonald had a farm, ee ay ee ay oh!");
+            Console.WriteLine();
+            Console.WriteLine();
+
 
             ISellable[] sellables = new ISellable[]
             {
