@@ -31,7 +31,8 @@ namespace Exercises.Tests
 
             //Assert
 
-            Assert.AreEqual(answer.Comparer, result.Comparer);
+            answer.Equals(result);
+            
 
 
         }
