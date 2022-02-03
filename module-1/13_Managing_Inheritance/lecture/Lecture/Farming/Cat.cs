@@ -16,6 +16,13 @@ namespace Lecture.Farming
         return "Eating cat food...";
         }
 
+        public  override string Sound
+        {
+            get
+            {
+                return "meow";
+            }
+        }
 
 
     }

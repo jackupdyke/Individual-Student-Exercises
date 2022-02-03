@@ -14,11 +14,19 @@ namespace Lecture.Farming
         /// <summary>
         /// The farm animal's sound.
         /// </summary>
-        public string Sound
+        public virtual string Sound
         {
             get
             {
-                return sound;
+                if(IsAsleep)
+                {
+                    return "Zzzzz";
+                }
+                else
+                {
+                    return sound;
+                }
+                
             }
             set
             {
@@ -26,6 +34,12 @@ namespace Lecture.Farming
             }
         }
 
+        public bool IsAsleep { get; private set; }
+
+        public void Sleep(bool isAsleep)
+        {
+            IsAsleep = isAsleep;
+        }
         public abstract string Eat();
 
         /// <summary>
