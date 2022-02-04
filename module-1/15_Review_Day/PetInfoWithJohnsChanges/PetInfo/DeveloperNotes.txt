@@ -1,0 +1,79 @@
+﻿Creating Classes
+
+Elements
+Namespace
+Class name
+Access modifier
+Instance or class variables
+Short-form properties
+Long-form properties
+Default constructors
+Explicit constructors
+Methods
+
+Project: 
+PetInfo
+
+Classes:
+Pet
+PetWorks
+UserInterface
+
+
+Data elements for Dog:
+Id
+Name
+Breed
+Type
+Birthdate
+SpayedOrNeutered
+LastVetVisit
+Date of canine parvovirus
+Date of distemper,
+Date of canine hepatitis 
+Date of  rabies
+Date of Bordetella 
+Date of Leptospira 
+
+Data elements for Cat:
+Id
+Name
+Breed
+Type
+Birthdate
+SpayedOrNeutered
+LastVetVisit
+Date of Feline distemper
+Date of  Feline herpesvirus type I
+Date of  Rabies
+Date of Feline leukemia virus, 
+Date of Bordetella,
+Date of  Feline immunodeficiency virus.
+
+
+Data elements for Parrot:
+Id
+Name
+Breed
+Type
+Birthdate
+LastVetVisit
+Date of polyomavirus
+
+
+
+
+Methods for Pet
+ToString()
+
+
+PetInfo
+=======
+I need to be able to add a pet
+I need to be able to delete a pet
+I need to be able to see a list of pets.
+I need to be able to end the program
+<optional> I need to be able to count the different types of pets.
+<optional> I need to be able to edit a pet
+<optional> I need to know when the next pet vet visit is due.
+
