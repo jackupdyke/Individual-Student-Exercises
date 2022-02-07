@@ -6,7 +6,7 @@ namespace PetInfoTest
     [TestClass]
     public class PetTest
     {
-        Pet pet;
+        private Pet pet;
 
         [TestInitialize]
         public void Setup()
@@ -31,8 +31,8 @@ namespace PetInfoTest
         {
             Assert.AreEqual(999, pet.Id, "Id failed");
             Assert.AreEqual("Bobo", pet.Name, "Name failed");
-            Assert.AreEqual("Bobo", pet.Type, "Type failed");
-            Assert.AreEqual("Bobo", pet.Breed, "Breed failed");
+            Assert.AreEqual("snake", pet.Type, "Type failed");
+            Assert.AreEqual("Blacksnake", pet.Breed, "Breed failed");
         }
     }
 }

@@ -5,7 +5,10 @@ namespace PetInfo
 {
     public class UserInterface
     {
-        private List<Pet> pets = new List<Pet>();
+        private PetWorks petWorks = new PetWorks();
+
+        // All Console.Read and Write goes in THIS class
+        // No Console.Read or Write in ANY other class
 
         public void UserInput()
         {
@@ -43,6 +46,8 @@ namespace PetInfo
 
         private void DisplayMenu()
         {
+            Console.WriteLine();
+            Console.WriteLine();
             Console.WriteLine("Please make a selection:");
             Console.WriteLine("1 - Add a pet");
             Console.WriteLine("2 - Delete a pet");
@@ -58,22 +63,18 @@ namespace PetInfo
             Console.Write("Enter pet name: ");
             string name = Console.ReadLine();
 
-
             Console.Write("Enter pet type (cat, dog, etc.): ");
             string type = Console.ReadLine();
-
 
             Console.Write("Enter pet breed (German Shapard, DSH, etc.): ");
             string breed = Console.ReadLine();
 
-            Pet pet = new Pet(id, name, type, breed);
-
-            pets.Add(pet);
+            petWorks.AddAPet(id, name, type, breed);
         }
 
         private void ListPets()
         {
-            foreach (Pet pet in pets)
+            foreach (Pet pet in petWorks.GetPets())
             {
                 Console.WriteLine(pet.ToString());
             }
@@ -84,19 +85,11 @@ namespace PetInfo
             Console.Write("Please enter a pet Id (5, 23, etc.): ");
             int id = int.Parse(Console.ReadLine());
 
-            int i = 0;
+            bool result = petWorks.DeleteAPet(id);
 
-            for (i = 0; i < pets.Count; i++)
+            if(result)
             {
-                if (pets[i].Id == id)
-                {
-                    break;
-                }
-            }
-
-            if (i < pets.Count)
-            {
-                pets.RemoveAt(i);
+                Console.WriteLine("Pet deleted.");
             }
             else
             {

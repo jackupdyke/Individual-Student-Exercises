@@ -6,11 +6,12 @@ namespace PetInfoTest
     [TestClass]
     public class PetWorksTest
     {
-        PetWorks petWorks;
+        private PetWorks petWorks;
 
         [TestInitialize]
         public void Setup()
         {
+            //Arrange
             petWorks = new PetWorks();
         }
 
@@ -33,11 +34,31 @@ namespace PetInfoTest
         public void PetWorksAddPet(int id, string name, string type, string breed)
         {
             //Act
-            //pets.AddPet(id, name, type, breed);
-            //Pet[] pets = pets.GetPets();
+            petWorks.AddAPet(id, name, type, breed);
+            Pet[] pets = petWorks.GetPets();
 
             ////Assert
-            //Assert.AreEqual(id, pets[1].Id);
+            Assert.AreEqual(id, pets[0].Id);
+        }
+
+        [TestMethod]
+        public void PetWorksDeletePet()
+        {
+            petWorks.AddAPet(7, "Lucky", "parrot", "Congo African");
+
+            Pet[] result = petWorks.GetPets();
+
+            int count = result.Length;
+
+            Assert.AreEqual(1, count);
+
+            petWorks.DeleteAPet(7);
+
+            result = petWorks.GetPets();
+
+            count = result.Length;
+
+            Assert.AreEqual(0, count);
         }
     }
 }
