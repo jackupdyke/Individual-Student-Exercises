@@ -25,7 +25,7 @@ namespace ExceptionHandling
                 Console.WriteLine(cities[3]);  // This statement will throw an IndexOutOfRangeException
                 Console.WriteLine("are all in Ohio."); // This line won't execute because the previous statement throws an Exception
             }
-            catch (IndexOutOfRangeException e)
+            catch (DivideByZeroException e)
             {
                 // Flow of control resumes here after the Exception is thrown
                 Console.WriteLine("XXX   Uh-oh, something went wrong...   XXX");
