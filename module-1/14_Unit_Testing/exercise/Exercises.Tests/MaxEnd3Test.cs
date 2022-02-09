@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+using System.Collections.Generic;
 namespace Exercises.Tests
 {
     [TestClass]
@@ -23,7 +23,8 @@ namespace Exercises.Tests
 
             //Assert
 
-            output.Equals(result);
+            CollectionAssert.AreEqual(result, output);
+            
         }
     }
 }
