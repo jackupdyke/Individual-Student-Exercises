@@ -43,6 +43,8 @@ namespace PetInfo
 
         public Pet[] GetPets()
         {
+
+            //get pets from disk
             Pet[] result = new Pet[pets.Count];
 
             int i = 0;
