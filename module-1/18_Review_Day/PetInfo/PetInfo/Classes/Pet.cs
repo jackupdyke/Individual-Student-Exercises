@@ -24,7 +24,7 @@
 
         public override string ToString()
         {
-            return Name + " - " + Type + " - " + Breed;
+            return Id + " - " + Name + " - " + Type + " - " + Breed;
         }
     }
 }

@@ -44,6 +44,11 @@ namespace Assessment.Models
                 return EstimatedTotal = (Length * Width / 100.00M * 4.99M);
             }
         }
+
+        //public virtual string ToString()
+        //{
+        //    return "WORK ORDER - {name} - {estimated total}";
+        //}
             
 
         

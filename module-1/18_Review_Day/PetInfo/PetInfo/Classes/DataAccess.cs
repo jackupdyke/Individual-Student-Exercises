@@ -9,9 +9,9 @@ namespace PetInfo
     {
         private string filename = @"C:\PetInfo\data.csv";
 
-        public Pet[] GetPets()
+        public Dictionary<int, Pet> GetPets()
         {
-            List<Pet> pets = new List<Pet>();
+            Dictionary < int, Pet> pets = new Dictionary<int, Pet>();
 
             using (StreamReader sr = new StreamReader(filename))
             {
@@ -26,11 +26,11 @@ namespace PetInfo
                     pet.Type = split[2];
                     pet.Breed = split[3];
 
-                    pets.Add(pet);
+                    pets.Add(pet.Id, pet);
                 }
             }
 
-            return pets.ToArray();
+            return pets;
         }
     }
 }

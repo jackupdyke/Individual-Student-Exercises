@@ -10,16 +10,16 @@ namespace PetInfo
         // If AddPet and DeletePet can change the data, we are updating two places (here and the disk file).
         // That's never a good idea unless there's a REALLY good reason.
 
-        private Dictionary<int, Pet> pets = new Dictionary<int, Pet>();
+        //private Dictionary<int, Pet> pets = new Dictionary<int, Pet>();
 
         public PetWorks()
         {
-            Pet[] petList = data.GetPets();
+            //Pet[] petList = data.GetPets();
             
-            foreach(Pet pet in petList)
-            {
-                pets[pet.Id] = pet;
-            }
+            //foreach(Pet pet in petList)
+            //{
+            //    pets[pet.Id] = pet;
+            //}
 
         }
 
@@ -27,13 +27,13 @@ namespace PetInfo
         public bool AddPet( int id, string name, string type, string breed)
         {
             bool result = false;
-            Pet pet = new Pet(id, name, type, breed);
+            //Pet pet = new Pet(id, name, type, breed);
 
-            if (!pets.ContainsKey(id))
-            {
-                pets.Add(id, pet);
-                result = true;
-            }
+            //if (!pets.ContainsKey(id))
+            //{
+            //    pets.Add(id, pet);
+            //    result = true;
+            //}
 
             //update file on disk
 
@@ -45,6 +45,9 @@ namespace PetInfo
         {
 
             //get pets from disk
+
+            Dictionary<int, Pet> pets = data.GetPets();
+
             Pet[] result = new Pet[pets.Count];
 
             int i = 0;
@@ -61,11 +64,11 @@ namespace PetInfo
         {
             bool result = false;
 
-            if (pets.ContainsKey(id))
-            {
-                pets.Remove(id);
-                result = true;
-            }
+            //if (pets.ContainsKey(id))
+            //{
+            //    pets.Remove(id);
+            //    result = true;
+            //}
 
             // update file on disk
 
