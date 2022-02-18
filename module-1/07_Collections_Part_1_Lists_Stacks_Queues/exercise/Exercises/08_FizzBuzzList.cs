@@ -18,28 +18,28 @@ namespace Exercises
         */
         public List<string> FizzBuzzList(int[] integerArray)
         {
-            List<string> result = new List<string>();
+            List<string> fizzBuzzList = new List<string>();
 
             foreach(int item in integerArray)
             {
-                if(item % 3 == 0 && item % 5 == 0)
+                if(item % 3 == 0 && item % 5 ==0)
                 {
-                    result.Add("FizzBuzz");
+                    fizzBuzzList.Add("FizzBuzz");
                 }
                 else if(item % 3 == 0)
                 {
-                    result.Add("Fizz");
+                    fizzBuzzList.Add("Fizz");
                 }
                 else if(item % 5 == 0)
                 {
-                    result.Add("Buzz");
+                    fizzBuzzList.Add("Buzz");
                 }
                 else
                 {
-                    result.Add(item.ToString());
+                    fizzBuzzList.Add(item.ToString());
                 }
             }
-            return result;
+            return fizzBuzzList;
         }
     }
 }
