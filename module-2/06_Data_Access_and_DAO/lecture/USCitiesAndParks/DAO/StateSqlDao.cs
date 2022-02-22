@@ -20,7 +20,8 @@ namespace USCitiesAndParks.DAO
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT state_abbreviation, state_name FROM state WHERE state_abbreviation = @state_abbreviation;", conn);
+                SqlCommand cmd = new SqlCommand("SELECT state_abbreviation, state_name FROM state WHERE" + 
+                    "state_abbreviation = @state_abbreviation;", conn);
                 cmd.Parameters.AddWithValue("@state_abbreviation", stateAbbreviation);
 
                 SqlDataReader reader = cmd.ExecuteReader();

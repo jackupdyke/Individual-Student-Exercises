@@ -21,7 +21,9 @@ namespace USCitiesAndParks.DAO
 
         public IList<Park> GetParksByState(string stateAbbreviation)
         {
-            throw new NotImplementedException();
+            
+            IList<Park> parks = new List<Park>();
+            return parks;
         }
 
         public Park CreatePark(Park park)

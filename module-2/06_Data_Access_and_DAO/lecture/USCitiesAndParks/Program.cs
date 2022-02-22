@@ -14,6 +14,8 @@ namespace USCitiesAndParks
             //string connectionString = configuration.GetConnectionString("UnitedStates");
 
             string connectionString = @"Server=.\SQLEXPRESS;Database=UnitedStates;Trusted_Connection=True;";
+            //Data Source=.\sqlexpress;Initial Catalog=UnitedStates;Integrated Security=True
+
 
             ICityDao cityDao = new CitySqlDao(connectionString);
             IStateDao stateDao = new StateSqlDao(connectionString);
