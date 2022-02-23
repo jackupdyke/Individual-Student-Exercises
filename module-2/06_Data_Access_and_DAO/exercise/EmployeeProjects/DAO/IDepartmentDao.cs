@@ -11,7 +11,10 @@ namespace EmployeeProjects.DAO
         /// </summary>
         /// <param name="departmentId">The department id to get from the data store.</param>
         /// <returns>A filled out Department object.</returns>
+        /// 
+       
         Department GetDepartment(int departmentId);
+
 
         /// <summary>
         /// Gets all departments from the data store.
