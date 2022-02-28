@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data.SqlClient;
 using System.Transactions;
+using USCitiesAndParks.DAO;
 using USCitiesAndParks.Models;
 
 namespace USCitiesAndParksTests
@@ -30,6 +31,22 @@ namespace USCitiesAndParksTests
         {
             City city = new City();
             Assert.IsNotNull(city);
+        }
+
+        [TestMethod]
+        public void GetCityTest()
+        {
+            //arrange
+            CitySqlDao cityDao = new CitySqlDao(ConnectionString);
+
+            //Act
+
+            City city = cityDao.GetCity(170);
+
+            //Assert
+
+            Assert.IsNotNull(city);
+
         }
 
         protected int GetRowCount(string table)
