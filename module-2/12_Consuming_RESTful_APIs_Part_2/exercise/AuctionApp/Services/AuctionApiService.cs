@@ -76,17 +76,43 @@ namespace AuctionApp.Services
 
         public Auction AddAuction(Auction newAuction)
         {
-            throw new System.NotImplementedException();
+            RestRequest request = new RestRequest("auctions");
+            request.AddJsonBody(newAuction);
+            IRestResponse<Auction> response = client.Post<Auction>(request);
+
+            CheckForError(response, "Add auction");
+            return response.Data;
         }
 
         public Auction UpdateAuction(Auction auctionToUpdate)
         {
-            throw new System.NotImplementedException();
+            RestRequest request = new RestRequest($"auctions/{auctionToUpdate.Id}");
+            request.AddJsonBody(auctionToUpdate);
+            IRestResponse<Auction> response = client.Put<Auction>(request);
+
+            CheckForError(response, $"Update auction {auctionToUpdate.Id}");
+            return response.Data;
         }
 
         public bool DeleteAuction(int auctionId)
         {
-            throw new System.NotImplementedException();
+            RestRequest request = new RestRequest($"auctions/{auctionId}");
+            IRestResponse response = client.Delete(request);
+
+            CheckForError(response, $"Delete auction {auctionId}");
+            return true;
         }
+        private void CheckForError(IRestResponse response, string action = "")
+        {
+            if (response.ResponseStatus != ResponseStatus.Completed)
+            {
+                throw new HttpRequestException($"There was an error in communicating with the server.{action}");
+            }
+            else if (!response.IsSuccessful)
+            {
+                throw new HttpRequestException($"An error was encountered. Status {(int)response.StatusCode}");
+            }
+        }
+
     }
 }
