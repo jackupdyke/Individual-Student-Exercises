@@ -40,7 +40,7 @@ namespace AuctionApp.Controllers
             }
             else if (title_like != null && currentBid_lte > 0)
             {
-                return dao.SearchByTitleAndPrice(title_like, currentBid_lte); ;
+                return dao.SearchByTitleAndPrice(title_like, currentBid_lte); 
             }
             else if(title_like != null)
             {
