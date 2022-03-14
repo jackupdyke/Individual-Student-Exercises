@@ -1,0 +1,16 @@
+
+h1 {
+    color: firebrick;
+    background-color: blue;
+}
+body{
+    background-color: green;
+}
+
+.special{
+color: yellow;
+}
+
+#lastParagraph{
+text-decoration: line-through;
+}

@@ -4,8 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Color and Number Survey</title>
+    <link rel="stylesheet" href="infostyles.css">
 </head>
 <body>
+    <h1>Favorite Color and Number Survey</h1>
+    <form action="http://localhost:3000/api/users/login/fakepath" method="POST">
+        <label for="name">Name:</label>
+        <input id="name" name="name" type="text" required />
+        <br />
+
+        <label for="email">Email:</label>
+        <input id="email" name="email" type="email" required/>
+        <br />
+
+        <label for="date-of-birth">Date of birth:</label>
+        <input id="date-of-birth" name="date-of-birth" type="date"  />
+        <br />
+
+        <label for="favorite-color">Favorite Color:</label>
+        <input id="favorite-color" name="favorite-color" type="color" />
+        <br />
+
+        <label for="lucky-number">Favorite Number:</label>
+        <input id="lucky-number" name="lucky-number" type="number" />
+        <br />
+
+        <label for="confirmation">Confirm data is correct:</label>
+        <input id="confirmation" name="confirmation" type="checkbox" />
+        <br />
+
+        <input type="submit" value="Submit">
+
+    </form>
+    
     
 </body>
 </html>

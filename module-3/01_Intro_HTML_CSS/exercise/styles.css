@@ -1,0 +1,29 @@
+body{
+    background-color: #FF3C00;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    color:#311D00;
+    text-align: center;
+    
+}
+h2{
+    color: #311D00;
+    text-decoration: underline;
+}
+img{
+    height: 250px;
+    width: 250px;
+}
+td{
+    font-size: 14px;
+}
+th{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+blockquote{
+    font-style: italic;
+}
