@@ -1,0 +1,26 @@
+
+
+h1 {
+    color:firebrick;
+    background-color: blue;
+}
+
+div{
+    background-color: yellow;
+}
+
+
+
+
+body {
+    background-color: green;
+}
+
+.special{
+    color: yellow;
+    background-color: white;
+}
+
+#lastParagraph{
+    text-decoration: line-through;
+}
