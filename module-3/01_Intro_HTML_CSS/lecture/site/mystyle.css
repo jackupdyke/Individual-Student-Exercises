@@ -1,16 +1,42 @@
 
+<<<<<<< HEAD
 h1 {
     color: firebrick;
     background-color: blue;
 }
 body{
+=======
+
+h1 {
+    color:firebrick;
+    background-color: blue;
+}
+
+div{
+    background-color: yellow;
+}
+
+
+
+
+body {
+>>>>>>> 4fd89a139b24cb453ca1aa99b52f7aba0aa9b212
     background-color: green;
 }
 
 .special{
+<<<<<<< HEAD
 color: yellow;
 }
 
 #lastParagraph{
 text-decoration: line-through;
+=======
+    color: yellow;
+    background-color: white;
+}
+
+#lastParagraph{
+    text-decoration: line-through;
+>>>>>>> 4fd89a139b24cb453ca1aa99b52f7aba0aa9b212
 }
