@@ -29,12 +29,13 @@ aside{
 aside img{
   height: 120px;
   width: 120px;
-  margin-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 main{
   margin-left: 200px;
-  padding-right: 20px;
-  padding-left: 20px;
+  
 }
 nav ul li{
   text-align: center;
@@ -42,46 +43,48 @@ nav ul li{
   border-color: rgba(0, 173, 238, 0.4);
   border-width: 1px;
   border-bottom-style: solid;
-  width: 55%;
+  width: 50%;
   margin-left: 50px;
   margin-right: 50px;
   list-style: none;
-  line-height: 3;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 nav ul li a{
   font-weight: bold;
   color: #00ADEE;
   text-decoration:none;
 }
-ul::first-line{
+li:nth-child(1){
   text-decoration: underline;
 }
-main header img{
+main{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+main header img[src="stacked-logo.png"]{
   height: 100px;
-  padding-bottom: 1%;
+  margin-bottom: 1%;
 }
 img[src="https://via.placeholder.com/2400X800"] {
-  position: fixed;
-  width: 10%;
+  width: 100%;
+  padding-bottom: 1%;
 }
 main section div {
   width: 33%;
-  display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr;
-  float: left;
+  display: inline-block;
 }
-h2{
+section h2{
   color: #8CC36F;
 }
 h2 i{
   padding: 5%;
 }
 #what-we-do{
+  border-right: solid;
   border-color: rgba(170, 239, 135, 0.8);
   border-width: 1px;
-  border-right-style: solid;
+  padding-top: 1%;
   padding-right: 10px;
   
 }
@@ -91,7 +94,12 @@ h2 i{
   border-right-style: solid;
   padding-left: 10px;
   padding-right: 10px;
+  padding-top: 1%;
 }
 #contact-us{
   padding-left: 10px;
+  padding-top: 1%;
+}
+section ::first-line{
+  border-left: none;
 }
