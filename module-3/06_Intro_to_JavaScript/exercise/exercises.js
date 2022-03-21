@@ -7,9 +7,15 @@
 		sumDouble(2, 2) → 8
 */
 		function sumDouble(x, y) {
-			// do logic here
-			// return result;
-			return x + y;
+			if(x === y)
+			{
+				return 2 * (x + y);
+			}
+			else
+			{
+				return x + y;
+			}
+			
         }
 
 
@@ -22,6 +28,18 @@
 		hasTeen(20, 10, 13) → true
 */
 
+		function hasTeen(a, b, c)
+		{
+			if((13 <= a && a <= 19) || (13 <= b && b <= 19) || (13 <= c && c <= 19))
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+
 /* 
 3. **lastDigit** Given two non-negative int values, return true if they have the same 
     last digit, such as with 27 and 57.
@@ -31,6 +49,20 @@
 		lastDigit(3, 113) → true
 */
 
+		function lastDigit(a, b){ 
+			let stringA = String(a).slice(-1);
+			let stringB = String(b).slice(-1);
+			let lastDigitA = Number(stringA);
+			let lastDigitB = Number(stringB);
+			if(lastDigitA == lastDigitB)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 /*
 4. **seeColor** Given a string, if the string begins with "red" or "blue" return that color 
     string, otherwise return the empty string.
@@ -39,6 +71,25 @@
 		seeColor("xxred") → ""
         seeColor("blueTimes") → "blue"
 */
+		function seeColor(a)
+		{
+			let firstThree = a.substring(0, 3);
+			let firstFour = a.substring(0,4);
+
+			if(firstThree === "red")
+			{
+				return firstThree;
+			}
+			else if(firstFour === "blue")
+			{
+				return firstFour;
+			}
+			else
+			{
+				return "";
+			}
+			
+		}
 
 /*
 5. **oddOnly** Write a function that given an array of integer of any length, filters out 
@@ -48,6 +99,18 @@
 		oddOnly([2, 4, 8, 32, 256]); → []
 */
 
+		function oddOnly(a)
+		{
+			let oddArray = []
+			for(let i = 0; i < a.length; i++)
+			{
+				if(a[i] % 2 != 0)
+				{
+					oddArray.push(a[i]);
+				}
+			}
+			return oddArray;
+		}
 /*
 6. **frontAgain** Given a string, return true if the first 2 chars in the string also appear 
     at the end of the string, such as with "edited".
@@ -56,6 +119,20 @@
 		frontAgain("edit") → false
 		frontAgain("ed") → true
 */
+		function frontAgain(a)
+		{
+			let firstTwo = a.slice(0, 2);
+			let lastTwo = a.slice(a.length - 2);
+
+			if(firstTwo == lastTwo)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
 
 /*
 7. **cigarParty** When squirrels get together for a party, they like to have cigars. 
@@ -69,6 +146,23 @@ or false otherwise.
 		cigarParty(70, true) → true
 */
 
+		function cigarParty(numberOfCigars, isWeekend)
+		{
+			if(40 <= numberOfCigars && isWeekend == true)
+			{
+				return true;
+			}
+			else if(40 <= numberOfCigars && numberOfCigars <= 60)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+
+		}
+
 /*
 8. **fizzBuzz** Because you know you can't live without it, FizzBuzz.
 
@@ -79,6 +173,25 @@ or false otherwise.
 		fizzBuzz(8) → 8
 */
 
+		function fizzBuzz(a)
+		{
+			if(a % 5 == 0 && a % 3 == 0)
+			{
+				return "FizzBuzz";
+			}
+			else if(a % 5 == 0)
+			{
+				return "Buzz";
+			}
+			else if(a % 3 == 0)
+			{
+				return "Fizz";
+			}
+			else
+			{
+				return a;
+			}
+		}
 /*
 9. **filterEvens** Write a function that filters an array to only include even numbers.
 
@@ -88,6 +201,19 @@ or false otherwise.
 	filterEvens([100, 8, 21, 24, 62, 9, 7]) → [100, 8, 24, 62]
 */
 
+	function filterEvens(a)
+		{
+			let evenArray = []
+			for(let i = 0; i < a.length; i++)
+			{
+				if(a[i] % 2 == 0)
+				{
+					evenArray.push(a[i]);
+				}
+			}
+			return evenArray;
+		}
+	
 /*
 10. **filterBigNumbers** Write a function that filters numbers greater than or equal to 100.
 
@@ -96,6 +222,18 @@ or false otherwise.
 	filterBigNumbers([]) → []
 */
 
+		function filterBigNumbers(a)
+		{
+			let bigArray = []
+			for(let i = 0; i < a.length; i++)
+			{
+				if(a[i] >= 100)
+				{
+					bigArray.push(a[i]);
+				}
+			}
+			return bigArray;
+		}
 /*
 11. **filterMultiplesOfX** Write a function to filter numbers that are a multiple of a 
 parameter, `x` passed in.
@@ -104,6 +242,19 @@ parameter, `x` passed in.
 	filterMultiplesOfX([3, 5, 10, 20, 18, 21, 42, 67], 5) → [5, 10, 20]
 */
 
+		function filterMultiplesOfX(a, x)
+		{
+			let multipleArray = [];
+
+			for(let i = 0; i < a.length; i++)
+			{
+				if(a[i] % x == 0)
+				{
+					multipleArray.push(a[i]);
+				}
+			}
+			return multipleArray;
+		}
 /*
 12. **createObject** Write a function that creates an object with a property called 
 firstName, lastName, and age. Populate the properties with your values.
@@ -116,3 +267,13 @@ firstName, lastName, and age. Populate the properties with your values.
 		age
 	}
 */
+	function createObject()
+	{
+		let person =
+		{
+			firstName: "John",
+			lastName: "Smith",
+			age: 25
+		};
+		return person;
+	}
