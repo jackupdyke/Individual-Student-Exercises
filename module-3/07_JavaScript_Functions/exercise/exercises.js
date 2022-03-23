@@ -159,5 +159,14 @@ let unfilteredArray = [1, 2, 3, 4, 5, 6];
 
     function getSumOfSubArrayValues(arr)
     {
+        if(arr == null || arr.length == 0)
+        {
+            return 0;
+        }
+        
+        else
+        {
+            return arr.reduce((t,e) => t.concat(e)).reduce((t,e) => t + e);
+        }
         
     }
