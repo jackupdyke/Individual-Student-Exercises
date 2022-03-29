@@ -35,7 +35,7 @@
       <!-- user listing goes here -->
       <tr
         v-for="user in filteredList"
-        v-bind:key="user.username"
+        v-bind:key="user.emailAddress"
         v-bind:class="{ disabled: user.status === 'Disabled' }"
       >
         <td>{{ user.firstName }}</td>
