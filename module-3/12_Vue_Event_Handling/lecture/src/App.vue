@@ -2,6 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <product-review></product-review>
+    
   </div>
 </template>
 
