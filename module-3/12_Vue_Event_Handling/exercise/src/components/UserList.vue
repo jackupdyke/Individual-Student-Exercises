@@ -15,7 +15,12 @@
       <tbody>
         <tr>
           <td>
-            <input type="checkbox" id="selectAll" />
+            <input
+              type="checkbox"
+              id="selectAll"
+              v-on:change="selectAll($event)"
+              v-bind:checked="selectedUserIDs.length === users.length"
+            />
           </td>
           <td>
             <input
@@ -50,9 +55,9 @@
           <td>
             <input
               type="checkbox"
-              v-bind:checked="selectedUserIDs.includes(user.id)"
               v-bind:id="user.id"
               v-bind:value="user.id"
+              v-model="selectedUserIDs"
             />
           </td>
           <td>{{ user.firstName }}</td>
@@ -81,9 +86,9 @@
     </table>
 
     <div class="all-actions">
-      <button>Enable Users</button>
-      <button>Disable Users</button>
-      <button>Delete Users</button>
+      <button v-on:click="enableSelectedUsers">Enable Users</button>
+      <button v-on:click="disableSelectedUsers">Disable Users</button>
+      <button v-on:click="deleteSelectedUsers">Delete Users</button>
     </div>
 
     <button>Add New User</button>
@@ -202,6 +207,41 @@ export default {
       }
       if (this.user.status == "Disabled") {
         return (this.user.status = "Active");
+      }
+    },
+    enableSelectedUsers() {
+      this.selectedUserIDs.forEach((id) => {
+        this.user = this.users.find((item) => {
+          return item.id === id;
+        });
+
+        this.selectedUserIDs = [];
+        return (this.user.status = "Active");
+      });
+    },
+    disableSelectedUsers() {
+      this.selectedUserIDs.forEach((id) => {
+        this.user = this.users.find((item) => {
+          return item.id === id;
+        });
+
+        this.selectedUserIDs = [];
+        return (this.user.status = "Disabled");
+      });
+    },
+    deleteSelectedUsers() {
+      let newUsers = this.users.filter((user) => {
+        return !this.selectedUserIDs.includes(user.id);
+      });
+      this.users = newUsers;
+      this.selectedUserIDs = [];
+    },
+    selectAll(event) {
+      if (event.target.checked) {
+        this.selectedUserIDs = [];
+        this.users.forEach((user) => this.selectedUserIDs.push(user.id));
+      } else {
+        this.selectedUserIDs = [];
       }
     },
   },
