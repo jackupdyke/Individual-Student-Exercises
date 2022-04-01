@@ -91,11 +91,11 @@
       <button v-on:click="deleteSelectedUsers">Delete Users</button>
     </div>
 
-    <button>Add New User</button>
+    <button v-show="!showForm" v-on:click.prevent="showForm = true">Add New User</button>
 
     <form
       v-on:submit.prevent="saveUser"
-      v-show="showForm === true"
+      v-show="showForm"
       id="frmAddNewUser"
     >
       <div class="field">
@@ -133,6 +133,7 @@ export default {
       },
       showForm: false,
       selectedUserIDs: [],
+      counter: 7,
       newUser: {
         id: null,
         firstName: "",
@@ -195,8 +196,19 @@ export default {
   },
   methods: {
     saveUser() {
-      this.users.push(this.newUser);
+      this.newUser.id = this.counter,
+      this.users.unshift(this.newUser);
+      this.resetForm();
+      this.counter += 1;
+    },
+    resetForm(){
       this.showForm = false;
+      this.newUser = {id: null,
+        firstName: "",
+        lastName: "",
+        username: "",
+        emailAddress: "",
+        status: "Active",};
     },
     flipStatus(id) {
       this.user = this.users.find((item) => {
