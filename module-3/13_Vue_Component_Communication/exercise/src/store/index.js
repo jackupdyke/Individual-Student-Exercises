@@ -30,8 +30,28 @@ export default new Vuex.Store({
       read: false,
       isbn: "9783125971400"
     }
+    
+    
   ]},
-  mutations: {},
+  newBooks: [
+    {
+      title: "",
+      author: "", 
+      read: false,
+      isbn: null,
+    },
+  ],
+  mutations: {
+    MARK_READ(state, book){
+      book.read = true;
+    },
+    MARK_UNREAD(state, book){
+      book.read = false;
+    },
+    ADD_BOOK(state, newBook){
+      state.books.unshift(newBook);
+    }
+  },
   actions: {},
   modules: {},
   strict: true
